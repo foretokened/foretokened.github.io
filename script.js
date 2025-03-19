@@ -5,22 +5,18 @@ function fetchCSVAndRender() {
         header: true,
         complete: function(results) {
             const timeline = document.getElementById('timeline');
-            results.data.forEach((entry) => {
+            results.data.forEach((entry, index) => {
                 if (!entry.date || !entry.title) return;
                 const item = document.createElement('div');
                 item.className = 'timeline-item';
                 item.innerHTML = `
                     <div class="card">
-                        <div class="icon">
-                            <svg fill="#888" height="40" width="40" viewBox="0 0 24 24">
-                                <circle cx="12" cy="12" r="10" stroke="#ccc" stroke-width="2" fill="none"/>
-                                <path d="M12 6v6l4 2" stroke="#888" stroke-width="2" fill="none"/>
-                            </svg>
-                        </div>
                         <h4>${entry.date}</h4>
-                        <p>${entry.title}<br>${entry.til.substring(0, 50)}...</p>
+                        <p><strong>${entry.title}</strong><br>${entry.til.substring(0, 60)}...</p>
                     </div>
-                    <div class="circle"></div>
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg>
+                    </div>
                 `;
                 item.onclick = () => openModal(entry);
                 timeline.appendChild(item);

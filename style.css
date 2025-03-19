@@ -1,90 +1,90 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    margin: 0;
     background: #ffffff;
     color: #333;
+    margin: 0;
     padding: 20px;
 }
 .header {
     text-align: center;
-    font-size: 2.2em;
-    font-weight: 500;
+    font-size: 2em;
     margin-bottom: 40px;
 }
 .timeline-container {
-    position: relative;
     overflow-x: auto;
-    scroll-snap-type: x mandatory;
+    white-space: nowrap;
     padding-bottom: 100px;
+    position: relative;
 }
 .timeline {
     display: flex;
-    align-items: flex-start;
-    gap: 60px;
-    padding: 0 40px;
-    min-width: max-content;
+    gap: 120px;
     position: relative;
-    scroll-snap-align: start;
+    align-items: center;
 }
-.timeline-line {
+.timeline::before {
+    content: '';
     position: absolute;
-    top: 100px;
+    top: 50%;
     left: 0;
+    height: 4px;
     width: 100%;
-    height: 3px;
     background-color: #ccc;
-    z-index: 1;
+    z-index: 0;
 }
 .timeline-item {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     flex-shrink: 0;
-    text-align: center;
-    scroll-snap-align: start;
-    z-index: 2;
+    width: 220px;
     cursor: pointer;
-    transition: transform 0.3s ease;
-}
-.timeline-item:hover {
-    transform: scale(1.03);
 }
 .timeline-item .icon {
-    width: 40px;
-    height: 40px;
-    margin: 0 auto 10px;
-}
-.timeline-item .circle {
-    width: 18px;
-    height: 18px;
     background-color: #007acc;
-    border: 3px solid #fff;
     border-radius: 50%;
-    margin: 0 auto;
-    position: relative;
-    z-index: 3;
-    box-shadow: 0 0 4px rgba(0,0,0,0.2);
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+.timeline-item .icon svg {
+    fill: #fff;
+    width: 20px;
+    height: 20px;
 }
 .timeline-item .card {
-    background: #fff;
-    border-radius: 12px;
+    background-color: #fff;
+    border-radius: 10px;
     padding: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     width: 220px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-    position: absolute;
-    top: -180px;
-    left: 50%;
-    transform: translateX(-50%);
-    transition: all 0.3s ease;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
 }
-.timeline-item .card h4 {
-    margin: 0 0 5px 0;
+.timeline-item:nth-child(even) .card {
+    order: -1;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.timeline-item:hover .card {
+    transform: scale(1.03);
+}
+.card h4 {
+    margin: 0 0 8px;
     font-size: 1em;
     font-weight: 600;
 }
-.timeline-item .card p {
+.card p {
     margin: 0;
     font-size: 0.85em;
-    color: #666;
+    color: #555;
 }
 
 /* Modal styling */
