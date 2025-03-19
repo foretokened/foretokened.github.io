@@ -1,0 +1,10 @@
+date,title,til,application,references,code_snippet
+2025-03-18,LangGraph Agents,Learned about subgraph routing,Used to route tokens by deterministic factor type,https://langchain.com/docs/langgraph,"```python
+class RouterAgent:
+    def route(token):
+        pass
+```"
+2025-03-19,VertexAI Prompt Design,Tuned prompt templates for deterministic context,Integrated prompt design schema into agent input chain,https://cloud.google.com/vertex-ai/docs/generative-ai,"```python
+def build_prompt(context, task):
+    return f""Given {context}, perform: {task}""
+```"

@@ -1,0 +1,106 @@
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #ffffff;
+    color: #333;
+    padding: 20px;
+    margin: 0;
+}
+.header {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+.timeline-container {
+    position: relative;
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 60px;
+}
+.timeline-line {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background-color: #ccc;
+    z-index: 1;
+}
+.timeline {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+.timeline-item {
+    position: relative;
+    margin: 0 30px;
+    text-align: center;
+    cursor: pointer;
+}
+.timeline-item .circle {
+    width: 20px;
+    height: 20px;
+    background: #3498db;
+    border-radius: 50%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+.timeline-item .label {
+    margin-top: 10px;
+    font-size: 0.85em;
+    white-space: nowrap;
+}
+
+.modal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+.modal.hidden {
+    display: none;
+}
+.modal-content {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 800px;
+    position: relative;
+}
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 22px;
+    cursor: pointer;
+}
+.tabs {
+    margin-top: 15px;
+}
+.tab-button {
+    background: #ddd;
+    border: none;
+    padding: 10px 15px;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.tab-button:hover {
+    background: #ccc;
+}
+.tab-content {
+    margin-top: 20px;
+    background: #f7f7f7;
+    padding: 15px;
+    border-radius: 6px;
+    white-space: pre-wrap;
+    font-family: monospace;
+}
