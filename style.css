@@ -3,41 +3,49 @@ body {
     font-family: 'Inter', sans-serif;
     background: #ffffff;
     color: #333;
-    padding: 20px;
     margin: 0;
+    padding: 20px;
 }
 .header {
     text-align: center;
     font-size: 2em;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
-.timeline-container {
-    position: relative;
-    width: 100%;
+.timeline-wrapper {
     overflow-x: auto;
+    scroll-snap-type: x mandatory;
     padding-bottom: 60px;
-}
-.timeline-line {
-    position: absolute;
-    top: 40px;
-    left: 0;
-    height: 4px;
-    width: 100%;
-    background-color: #ccc;
-    z-index: 1;
 }
 .timeline {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    align-items: flex-end;
     position: relative;
-    z-index: 2;
+    height: 200px;
+    padding: 0 40px;
+    scroll-snap-align: start;
+    gap: 60px;
+    min-width: max-content;
+}
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 80px;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background: linear-gradient(90deg, #ccc, #eee);
+    z-index: 1;
 }
 .timeline-item {
     position: relative;
-    margin: 0 30px;
+    scroll-snap-align: start;
+    z-index: 2;
     text-align: center;
-    cursor: pointer;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+.timeline-item:hover {
+    transform: scale(1.05);
 }
 .timeline-item .circle {
     width: 20px;
@@ -46,14 +54,31 @@ body {
     border-radius: 50%;
     margin: 0 auto;
     position: relative;
-    z-index: 2;
+    z-index: 3;
+    border: 3px solid white;
+    box-shadow: 0 0 6px rgba(0,0,0,0.2);
 }
-.timeline-item .label {
-    margin-top: 10px;
+.timeline-item .card {
+    position: absolute;
+    top: -120px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    width: 180px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     font-size: 0.85em;
-    white-space: nowrap;
+    transition: all 0.3s ease;
 }
-
+.timeline-item .card h4 {
+    margin: 0 0 5px 0;
+    font-size: 1em;
+}
+.timeline-item .card p {
+    margin: 0;
+    color: #666;
+}
 .modal {
     position: fixed;
     top: 0; left: 0;
