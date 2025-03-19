@@ -25,7 +25,8 @@ body {
     min-width: max-content;
 }
 .timeline-line {
-    position: absolute;
+    position: relative;
+    display: flex;
     top: 50%;
     transform: translateY(-50%);
     left: 0;
