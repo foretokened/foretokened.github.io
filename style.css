@@ -29,6 +29,7 @@ body {
     flex-direction: column;
     align-items: center;
     position: relative;
+    justify-content: center;
 }
 .icon {
     width: 20px;
@@ -60,11 +61,11 @@ body {
 }
 .connector {
     width: 2px;
-    height: 60px;
+    flex-grow: 1;
     background: #ccc;
-    z-index: 0;
     animation: growLine 0.8s ease-in-out forwards;
     transform-origin: top;
+    margin: 0;
 }
 @keyframes growLine {
     from {
@@ -72,7 +73,7 @@ body {
         opacity: 0;
     }
     to {
-        height: 60px;
+        height: 100%;
         opacity: 1;
     }
 }
@@ -90,7 +91,7 @@ body {
     box-shadow: 0 10px 24px rgba(0,0,0,0.2);
 }
 .card.top {
-    margin-bottom: 70px;
+    margin-bottom: 30px; /* reduced from 70px */
 }
 .card.bottom {
     margin-top: 70px;

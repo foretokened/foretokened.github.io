@@ -1,3 +1,61 @@
 date,title,til,application,references,code_snippet
-2025-03-18,LangGraph Agents,"Learned about subgraph routing.","Used to route tokens by deterministic factor type.","https://langchain.com/docs/langgraph","class RouterAgent:\n    def route(token):\n        pass"
-2025-03-19,VertexAI Prompt Design,"Tuned prompt templates for deterministic context.","Integrated prompt design schema into agent input chain.","https://cloud.google.com/vertex-ai/docs/generative-ai","def build_prompt(context, task):\n    return f\"Given {context}, perform: {task}\""
+2025-03-01,LangGraph Agents,Learned about langgraph agents.,Applied langgraph agents in agent pipeline.,https://example.com/langgraph-agents,def example_0():
+    print('Example from LangGraph Agents')
+2025-03-02,VertexAI Prompt Design,Learned about vertexai prompt design.,Applied vertexai prompt design in agent pipeline.,https://example.com/vertexai-prompt-design,def example_1():
+    print('Example from VertexAI Prompt Design')
+2025-03-03,Deterministic Factors,Learned about deterministic factors.,Applied deterministic factors in agent pipeline.,https://example.com/deterministic-factors,def example_2():
+    print('Example from Deterministic Factors')
+2025-03-04,Chain of Prompts,Learned about chain of prompts.,Applied chain of prompts in agent pipeline.,https://example.com/chain-of-prompts,def example_3():
+    print('Example from Chain of Prompts')
+2025-03-05,Token Classification,Learned about token classification.,Applied token classification in agent pipeline.,https://example.com/token-classification,def example_4():
+    print('Example from Token Classification')
+2025-03-06,Subgraph Routing,Learned about subgraph routing.,Applied subgraph routing in agent pipeline.,https://example.com/subgraph-routing,def example_5():
+    print('Example from Subgraph Routing')
+2025-03-07,LLM Memory Design,Learned about llm memory design.,Applied llm memory design in agent pipeline.,https://example.com/llm-memory-design,def example_6():
+    print('Example from LLM Memory Design')
+2025-03-08,Reinforcement Prompter,Learned about reinforcement prompter.,Applied reinforcement prompter in agent pipeline.,https://example.com/reinforcement-prompter,def example_7():
+    print('Example from Reinforcement Prompter')
+2025-03-09,Agent Retry Logic,Learned about agent retry logic.,Applied agent retry logic in agent pipeline.,https://example.com/agent-retry-logic,def example_8():
+    print('Example from Agent Retry Logic')
+2025-03-10,Error Classification,Learned about error classification.,Applied error classification in agent pipeline.,https://example.com/error-classification,def example_9():
+    print('Example from Error Classification')
+2025-03-11,Prompt Compiler,Learned about prompt compiler.,Applied prompt compiler in agent pipeline.,https://example.com/prompt-compiler,def example_10():
+    print('Example from Prompt Compiler')
+2025-03-12,Context Window Management,Learned about context window management.,Applied context window management in agent pipeline.,https://example.com/context-window-management,def example_11():
+    print('Example from Context Window Management')
+2025-03-13,Multi-agent Planning,Learned about multi-agent planning.,Applied multi-agent planning in agent pipeline.,https://example.com/multi-agent-planning,def example_12():
+    print('Example from Multi-agent Planning')
+2025-03-14,Vector Embedding Insights,Learned about vector embedding insights.,Applied vector embedding insights in agent pipeline.,https://example.com/vector-embedding-insights,def example_13():
+    print('Example from Vector Embedding Insights')
+2025-03-15,Knowledge Injection,Learned about knowledge injection.,Applied knowledge injection in agent pipeline.,https://example.com/knowledge-injection,def example_14():
+    print('Example from Knowledge Injection')
+2025-03-16,Function Calling,Learned about function calling.,Applied function calling in agent pipeline.,https://example.com/function-calling,def example_15():
+    print('Example from Function Calling')
+2025-03-17,Schema Registry Design,Learned about schema registry design.,Applied schema registry design in agent pipeline.,https://example.com/schema-registry-design,def example_16():
+    print('Example from Schema Registry Design')
+2025-03-18,Observability Enhancements,Learned about observability enhancements.,Applied observability enhancements in agent pipeline.,https://example.com/observability-enhancements,def example_17():
+    print('Example from Observability Enhancements')
+2025-03-19,LangChain Streaming,Learned about langchain streaming.,Applied langchain streaming in agent pipeline.,https://example.com/langchain-streaming,def example_18():
+    print('Example from LangChain Streaming')
+2025-03-20,VertexAI ToolUse,Learned about vertexai tooluse.,Applied vertexai tooluse in agent pipeline.,https://example.com/vertexai-tooluse,def example_19():
+    print('Example from VertexAI ToolUse')
+2025-03-21,Prompt Evaluation,Learned about prompt evaluation.,Applied prompt evaluation in agent pipeline.,https://example.com/prompt-evaluation,def example_20():
+    print('Example from Prompt Evaluation')
+2025-03-22,PASTA Modeling,Learned about pasta modeling.,Applied pasta modeling in agent pipeline.,https://example.com/pasta-modeling,def example_21():
+    print('Example from PASTA Modeling')
+2025-03-23,Risk Mapping,Learned about risk mapping.,Applied risk mapping in agent pipeline.,https://example.com/risk-mapping,def example_22():
+    print('Example from Risk Mapping')
+2025-03-24,Security Pattern Matching,Learned about security pattern matching.,Applied security pattern matching in agent pipeline.,https://example.com/security-pattern-matching,def example_23():
+    print('Example from Security Pattern Matching')
+2025-03-25,TIL Journaling,Learned about til journaling.,Applied til journaling in agent pipeline.,https://example.com/til-journaling,def example_24():
+    print('Example from TIL Journaling')
+2025-03-26,Daily Agent Sync,Learned about daily agent sync.,Applied daily agent sync in agent pipeline.,https://example.com/daily-agent-sync,def example_25():
+    print('Example from Daily Agent Sync')
+2025-03-27,Token Lifecycle,Learned about token lifecycle.,Applied token lifecycle in agent pipeline.,https://example.com/token-lifecycle,def example_26():
+    print('Example from Token Lifecycle')
+2025-03-28,Prompt Template Builder,Learned about prompt template builder.,Applied prompt template builder in agent pipeline.,https://example.com/prompt-template-builder,def example_27():
+    print('Example from Prompt Template Builder')
+2025-03-29,Model Selection Logic,Learned about model selection logic.,Applied model selection logic in agent pipeline.,https://example.com/model-selection-logic,def example_28():
+    print('Example from Model Selection Logic')
+2025-03-30,AutoRefinement Loop,Learned about autorefinement loop.,Applied autorefinement loop in agent pipeline.,https://example.com/autorefinement-loop,def example_29():
+    print('Example from AutoRefinement Loop')

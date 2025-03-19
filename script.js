@@ -5,6 +5,8 @@ function loadTimeline() {
         header: true,
         complete: function(results) {
             const timeline = document.querySelector('.timeline');
+            let lastItem = null;
+
             results.data.forEach((entry, index) => {
                 if (!entry.date || !entry.title) return;
                 const item = document.createElement('div');
@@ -19,19 +21,30 @@ function loadTimeline() {
                     <div class="icon"></div>
                 `;
                 timeline.appendChild(item);
+                lastItem = item;
             });
+
+            // Auto-scroll to the most recent milestone
+            if (lastItem) {
+                setTimeout(() => {
+                    lastItem.scrollIntoView({ behavior: "smooth", inline: "center", block: "center" });
+                }, 300);
+            }
         }
     });
 }
+
 function openModal(date, title, til, app, refs, code) {
     document.getElementById('modalTitle').innerText = `${date} - ${title}`;
     window.modalData = { til, app, refs, code };
     showTab('til');
     document.getElementById('modal').classList.add('show');
 }
+
 function closeModal() {
     document.getElementById('modal').classList.remove('show');
 }
+
 function showTab(tab) {
     const content = {
         til: window.modalData.til,
@@ -41,4 +54,5 @@ function showTab(tab) {
     };
     document.getElementById('tabContent').innerText = content[tab];
 }
+
 window.onload = loadTimeline;
