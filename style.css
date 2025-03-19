@@ -1,84 +1,93 @@
 
 body {
     font-family: 'Inter', sans-serif;
+    margin: 0;
     background: #ffffff;
     color: #333;
-    margin: 0;
     padding: 20px;
 }
 .header {
     text-align: center;
-    font-size: 2em;
-    margin-bottom: 30px;
+    font-size: 2.2em;
+    font-weight: 500;
+    margin-bottom: 40px;
 }
-.timeline-wrapper {
+.timeline-container {
+    position: relative;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    padding-bottom: 60px;
+    padding-bottom: 100px;
 }
 .timeline {
     display: flex;
-    align-items: flex-end;
-    position: relative;
-    height: 200px;
-    padding: 0 40px;
-    scroll-snap-align: start;
+    align-items: flex-start;
     gap: 60px;
+    padding: 0 40px;
     min-width: max-content;
+    position: relative;
+    scroll-snap-align: start;
 }
-.timeline::before {
-    content: "";
+.timeline-line {
     position: absolute;
-    top: 80px;
+    top: 100px;
     left: 0;
-    height: 4px;
     width: 100%;
-    background: linear-gradient(90deg, #ccc, #eee);
+    height: 3px;
+    background-color: #ccc;
     z-index: 1;
 }
 .timeline-item {
     position: relative;
+    flex-shrink: 0;
+    text-align: center;
     scroll-snap-align: start;
     z-index: 2;
-    text-align: center;
-    flex-shrink: 0;
+    cursor: pointer;
     transition: transform 0.3s ease;
 }
 .timeline-item:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
+}
+.timeline-item .icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 10px;
 }
 .timeline-item .circle {
-    width: 20px;
-    height: 20px;
-    background: #3498db;
+    width: 18px;
+    height: 18px;
+    background-color: #007acc;
+    border: 3px solid #fff;
     border-radius: 50%;
     margin: 0 auto;
     position: relative;
     z-index: 3;
-    border: 3px solid white;
-    box-shadow: 0 0 6px rgba(0,0,0,0.2);
+    box-shadow: 0 0 4px rgba(0,0,0,0.2);
 }
 .timeline-item .card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    width: 220px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
     position: absolute;
-    top: -120px;
+    top: -180px;
     left: 50%;
     transform: translateX(-50%);
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
-    width: 180px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    font-size: 0.85em;
     transition: all 0.3s ease;
 }
 .timeline-item .card h4 {
     margin: 0 0 5px 0;
     font-size: 1em;
+    font-weight: 600;
 }
 .timeline-item .card p {
     margin: 0;
+    font-size: 0.85em;
     color: #666;
 }
+
+/* Modal styling */
 .modal {
     position: fixed;
     top: 0; left: 0;
@@ -94,8 +103,8 @@ body {
 }
 .modal-content {
     background: white;
-    padding: 25px;
-    border-radius: 10px;
+    padding: 30px;
+    border-radius: 12px;
     width: 80%;
     max-width: 800px;
     position: relative;
@@ -108,14 +117,14 @@ body {
     cursor: pointer;
 }
 .tabs {
-    margin-top: 15px;
+    margin-top: 20px;
 }
 .tab-button {
-    background: #ddd;
+    background: #e0e0e0;
     border: none;
     padding: 10px 15px;
     margin-right: 10px;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
 }
 .tab-button:hover {
@@ -124,8 +133,8 @@ body {
 .tab-content {
     margin-top: 20px;
     background: #f7f7f7;
-    padding: 15px;
-    border-radius: 6px;
+    padding: 20px;
+    border-radius: 8px;
     white-space: pre-wrap;
     font-family: monospace;
 }

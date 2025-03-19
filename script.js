@@ -11,8 +11,14 @@ function fetchCSVAndRender() {
                 item.className = 'timeline-item';
                 item.innerHTML = `
                     <div class="card">
+                        <div class="icon">
+                            <svg fill="#888" height="40" width="40" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10" stroke="#ccc" stroke-width="2" fill="none"/>
+                                <path d="M12 6v6l4 2" stroke="#888" stroke-width="2" fill="none"/>
+                            </svg>
+                        </div>
                         <h4>${entry.date}</h4>
-                        <p>${entry.title}</p>
+                        <p>${entry.title}<br>${entry.til.substring(0, 50)}...</p>
                     </div>
                     <div class="circle"></div>
                 `;
@@ -22,12 +28,14 @@ function fetchCSVAndRender() {
         }
     });
 }
+
 function openModal(entry) {
     document.getElementById('modalTitle').innerText = `${entry.date} — ${entry.title}`;
     window.currentEntry = entry;
     showTab('til');
     document.getElementById('modal').classList.remove('hidden');
 }
+
 function showTab(tab) {
     const content = {
         til: window.currentEntry.til,
@@ -37,7 +45,9 @@ function showTab(tab) {
     };
     document.getElementById('tabContent').innerText = content[tab];
 }
+
 function closeModal() {
     document.getElementById('modal').classList.add('hidden');
 }
+
 window.onload = fetchCSVAndRender;

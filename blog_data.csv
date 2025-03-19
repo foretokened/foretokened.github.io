@@ -1,3 +1,3 @@
 date,title,til,application,references,code_snippet
-2025-03-18,LangGraph Agents,"Learned about subgraph routing","Used to route tokens by deterministic factor type","https://langchain.com/docs/langgraph","```python\nclass RouterAgent:\n    def route(token):\n        pass\n```"
-2025-03-19,VertexAI Prompt Design,"Tuned prompt templates for deterministic context","Integrated prompt design schema into agent input chain","https://cloud.google.com/vertex-ai/docs/generative-ai","```python\ndef build_prompt(context, task):\n    return f\"Given {context}, perform: {task}\"\n```"
+2025-03-18,LangGraph Agents,"Learned about subgraph routing.","Used to route tokens by deterministic factor type.","https://langchain.com/docs/langgraph","class RouterAgent:\n    def route(token):\n        pass"
+2025-03-19,VertexAI Prompt Design,"Tuned prompt templates for deterministic context.","Integrated prompt design schema into agent input chain.","https://cloud.google.com/vertex-ai/docs/generative-ai","def build_prompt(context, task):\n    return f\"Given {context}, perform: {task}\""
